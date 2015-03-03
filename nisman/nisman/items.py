@@ -20,3 +20,8 @@ class EscuchaItem(scrapy.Item):
     localidad = scrapy.Field()
     provincia = scrapy.Field()
     pass
+
+class AudioItem(scrapy.Item):
+    # define the fields for your item here like:
+    url = scrapy.Field()
+    pass
