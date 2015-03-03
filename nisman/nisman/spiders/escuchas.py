@@ -44,7 +44,7 @@ class EscuchasSpider(scrapy.Spider):
             search_destino = re.search('Destino: (.*)', stripped)
             search_inicio = re.search('Inicio: (.*)', stripped)
             search_fin = re.search('Fin: (.*)', stripped)
-            search_calle = re.search('Calle: (.*)', stripped)
+            search_direccion = re.search('Calle: (.*)', stripped)
             search_numero = re.search('Número: (.*)', stripped)
             search_localidad = re.search('Localidad: (.*)', stripped)
             search_provincia = re.search('Provincia: (.*)', stripped)
@@ -57,8 +57,8 @@ class EscuchasSpider(scrapy.Spider):
                 item['inicio'] = search_inicio.group(1)
             if search_fin:
                 item['fin'] = search_fin.group(1)
-            if search_calle:
-                item['calle'] = search_calle.group(1)
+            if search_direccion:
+                item['direccion'] = search_direccion.group(1)
             if search_numero:
                 item['numero'] = search_numero.group(1)
             if search_localidad:
